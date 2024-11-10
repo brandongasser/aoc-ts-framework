@@ -1,3 +1,3 @@
-export function part2<E>(input: E): number {
+export function part2(input: any): number {
     throw new Error('Not Implemented');
 }
