@@ -47,6 +47,14 @@ export class Parser<E> {
             return result;
         });
     }
+
+    followedBy<T>(other: Parser<T>): Parser<E> {
+        return this.andThen(result => other.map(_ => result));
+    }
+
+    preceding<T>(other: Parser<T>): Parser<T> {
+        return this.andThen(_ => other);
+    }
     
 }
 
@@ -97,9 +105,12 @@ export function string(target: string): Parser<string> {
 }
 
 export const newline: Parser<string> = character('\n');
+export const endOfInput: Parser<null> = new Parser(input => /$/.test(input) ? [ null, input ] : null);
+export const endOfLine: Parser<null> = newline.map(_ => null).or(endOfInput);
 export const whitespace: Parser<string> = many(satisfy(c => /\s/.test(c))).map(xs => xs.join(''));
 
-export const naturalNumber: Parser<number> = some(satisfy(c => !isNaN(+c))).map(cs => +cs.join(''));
+export const digit: Parser<number> = satisfy(c => '123467890'.includes(c)).map(c => +c);
+export const naturalNumber: Parser<number> = some(satisfy(c => '1234567890'.includes(c))).map(cs => +cs.join(''));
 export const int: Parser<number> = character('-').andThen(_ => naturalNumber.map(n => -n)).or(naturalNumber);
 export const double: Parser<number> = int.andThen(i => character('.').andThen(_ => naturalNumber).map(d => +`${i}.${d}`)).or(int);
 
