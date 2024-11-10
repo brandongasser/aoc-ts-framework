@@ -1,0 +1,40 @@
+{
+  "name": "advent-of-code-test",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "bash runall.bash",
+    "start:1": "tsx day-01/main.ts",
+    "start:2": "tsx day-02/main.ts",
+    "start:3": "tsx day-03/main.ts",
+    "start:4": "tsx day-04/main.ts",
+    "start:5": "tsx day-05/main.ts",
+    "start:6": "tsx day-06/main.ts",
+    "start:7": "tsx day-07/main.ts",
+    "start:8": "tsx day-08/main.ts",
+    "start:9": "tsx day-09/main.ts",
+    "start:10": "tsx day-10/main.ts",
+    "start:11": "tsx day-11/main.ts",
+    "start:12": "tsx day-12/main.ts",
+    "start:13": "tsx day-13/main.ts",
+    "start:14": "tsx day-14/main.ts",
+    "start:15": "tsx day-15/main.ts",
+    "start:16": "tsx day-16/main.ts",
+    "start:17": "tsx day-17/main.ts",
+    "start:18": "tsx day-18/main.ts",
+    "start:19": "tsx day-19/main.ts",
+    "start:20": "tsx day-20/main.ts",
+    "start:21": "tsx day-21/main.ts",
+    "start:22": "tsx day-22/main.ts",
+    "start:23": "tsx day-23/main.ts",
+    "start:24": "tsx day-24/main.ts",
+    "start:25": "tsx day-25/main.ts"
+  },
+  "dependencies": {
+    "typescript": "^5.6.3",
+    "@types/node": "^22.9.0",
+    "tsx": "^4.19.2"
+  },
+  "author": "",
+  "license": "ISC"
+}
