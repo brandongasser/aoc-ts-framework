@@ -58,7 +58,7 @@ export class Parser<E> {
     
 }
 
-const item: Parser<string> = new Parser(input => {
+export const item: Parser<string> = new Parser(input => {
     if (input.length === 0) {
         return null;
     }
@@ -105,7 +105,7 @@ export function string(target: string): Parser<string> {
 }
 
 export const newline: Parser<string> = character('\n');
-export const endOfInput: Parser<null> = new Parser(input => /$/.test(input) ? [ null, input ] : null);
+export const endOfInput: Parser<null> = new Parser(input => input === '' ? [ null, input ] : null);
 export const endOfLine: Parser<null> = newline.map(_ => null).or(endOfInput);
 export const whitespace: Parser<string> = many(satisfy(c => /\s/.test(c))).map(xs => xs.join(''));
 
