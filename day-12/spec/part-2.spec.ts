@@ -1,0 +1,5 @@
+import * as Part2 from '../part-2';
+
+describe('Day 12 Part 2', () => {
+
+});

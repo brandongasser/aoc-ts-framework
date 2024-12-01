@@ -1,5 +1,5 @@
 {
-  "spec_dir": "",
+  "spec_dir": ".",
   "spec_files": [
     "**/*[sS]pec.ts"
   ],
@@ -8,6 +8,6 @@
   ],
   "env": {
     "stopSpecOnExpectationFailure": false,
-    "random": true
+    "random": false
   }
 }

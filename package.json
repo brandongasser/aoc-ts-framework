@@ -29,14 +29,17 @@
     "start:23": "tsx day-23/main.ts",
     "start:24": "tsx day-24/main.ts",
     "start:25": "tsx day-25/main.ts",
-    "test": "jasmine"
+    "test": "./node_modules/.bin/jasmine-ts"
   },
   "dependencies": {
-    "typescript": "^5.6.3",
-    "jasmine": "^5.4.0",
-    "@types/node": "^22.9.0",
-    "@types/jasmine": "^5.1.5",
-    "tsx": "^4.19.2"
+    "@types/jasmine": "^3.10.6",
+    "@types/node": "^22.10.1",
+    "jasmine": "^3.99.0",
+    "jasmine-ts": "^0.4.0",
+    "ts-loader": "^9.5.1",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
   },
   "author": "",
   "license": "ISC"
