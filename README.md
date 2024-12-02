@@ -5,6 +5,7 @@ This framework is meant to provide structure to the many solutions present in an
 - [Local Setup](#local-setup)
 - [Usage](#usage)
 - [Running](#running)
+- [Running Test Suite](#running-test-suite)
 
 ## Local Setup
 
@@ -56,4 +57,10 @@ $ npm run start:{day}
 
 ```bash
 $ npm run start
+```
+
+## Running Test Suite
+
+```
+$ npm run test
 ```
